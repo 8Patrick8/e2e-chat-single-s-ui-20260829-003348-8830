@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trinkgeld-Rechner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1 class="title">Trinkgeld-Rechner</h1>
+      <p class="subtitle">Trinkgeld, Gesamtbetrag und Betrag pro Person live berechnen.</p>
+    </header>
+
+    <section class="card" aria-labelledby="inputs-heading">
+      <h2 id="inputs-heading" class="card-heading">Eingaben</h2>
+
+      <div class="field">
+        <label for="amount">Betrag (€)</label>
+        <input type="number" id="amount" step="any" inputmode="decimal" value="50">
+      </div>
+
+      <div class="field">
+        <label for="tipPercent">Trinkgeld-Prozent (%)</label>
+        <input type="number" id="tipPercent" step="any" inputmode="decimal" value="10">
+      </div>
+
+      <div class="field">
+        <label for="people">Personenzahl</label>
+        <input type="number" id="people" step="any" inputmode="decimal" value="2">
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="results-heading">
+      <h2 id="results-heading" class="card-heading">Ergebnis</h2>
+
+      <p id="hint" class="hint" role="status" aria-live="polite"></p>
+
+      <div class="result-row">
+        <span class="result-label">Trinkgeld</span>
+        <span id="tipValue" class="result-value"></span>
+      </div>
+
+      <div class="result-row">
+        <span class="result-label">Gesamtbetrag</span>
+        <span id="totalValue" class="result-value"></span>
+      </div>
+
+      <div class="result-row result-row--last">
+        <span class="result-label">Betrag pro Person</span>
+        <span id="perPersonValue" class="result-value"></span>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
