@@ -1,0 +1,5 @@
+VERDICT: PASS
+
+Die Screenshots kann ich nicht sehen; ich urteile anhand des Textberichts. Die Playwright-Läufe sind vollständig grün: 1/1 Smoke-Test und 7/7 Akzeptanztests bestanden. Die Seite lädt mit Überschrift „Trinkgeld-Rechner“ und zeigt die drei Eingabefelder sowie drei beschriftete Ergebnisse. AC-01 bis AC-08 wurden durch die Tests abgedeckt und bestanden, inklusive Sofortberechnung, ungültiger Eingaben, schmalem Viewport und Sicherheitsanforderungen (`textContent`, kein `innerHTML`/`eval`). Es treten keine Console-Fehler, Uncaught Exceptions oder Stack-Traces auf.
+
+Der `npm install`-Fehler (ENOENT package.json) ist kein Produktfehler: Das Projekt ist eine statische Web-App ohne package.json und ohne npm-Build-Schritt; dieser Schritt ist für den Produkttyp nicht anwendbar. Die eigentliche Auslieferung über den statischen Server funktioniert nachweislich.
